@@ -4,7 +4,10 @@ import {
   StyleSheet,
   Text,
   View,
+  Image,
 } from 'react-360';
+
+import image from './static_assets/person-pic.jpg'
 
 export default class Hello360 extends React.Component {
   render() {
@@ -12,7 +15,8 @@ export default class Hello360 extends React.Component {
       <View style={styles.panel}>
         <View style={styles.greetingBox}>
           <Text style={styles.greeting}>
-            Welcome to React 360
+            My Name is Hays
+            <Image source={image} />
           </Text>
         </View>
       </View>
