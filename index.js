@@ -7,16 +7,25 @@ import {
   Image,
 } from 'react-360';
 
-import image from './static_assets/person-pic.jpg'
-
 export default class Hello360 extends React.Component {
   render() {
     return (
-      <View style={styles.panel}>
+      <View style={{
+        width: this.props.width, 
+        height: this.props.height,
+        backgroundColor: 'rgba(255, 255, 255, 0.4)',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+      <Image
+              style={{ width: 2048*2, height: 1536*2 }}
+              source={{ uri: this.props.imageUrl }}
+            />
         <View style={styles.greetingBox}>
           <Text style={styles.greeting}>
             My Name is Hays
-            <Image source={image} />
+            {/**/}
+            
           </Text>
         </View>
       </View>
@@ -24,11 +33,12 @@ export default class Hello360 extends React.Component {
   }
 };
 
+
 const styles = StyleSheet.create({
   panel: {
-    // Fill the entire surface
-    width: 1000,
-    height: 600,
+    // // Fill the entire surface
+    // width: 1000,
+    // height: 600,
     backgroundColor: 'rgba(255, 255, 255, 0.4)',
     justifyContent: 'center',
     alignItems: 'center',
