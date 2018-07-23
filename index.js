@@ -18,7 +18,10 @@ export default class Hello360 extends React.Component {
         alignItems: 'center',
       }}>
       <Image
-              style={{ width: 2048*2, height: 1536*2 }}
+              style={{
+                width: this.props.width, 
+                height: this.props.height,
+              }}
               source={{ uri: this.props.imageUrl }}
             />
         <View style={styles.greetingBox}>

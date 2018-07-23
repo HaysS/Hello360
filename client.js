@@ -13,8 +13,8 @@ function init(bundle, parent, options = {}) {
     ...options,
   });
 
-  const width = 2048*2
-  const height = 1536*2
+  const width = 4500
+  const height = 4000
   const surface = r360.getDefaultSurface()
   // surface.setShape(Surface.SurfaceShape.Flat);
   surface.resize(width, height)
